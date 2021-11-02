@@ -1,11 +1,45 @@
+const moment = require('moment');
+
 module.exports = {
+    // github pages
+    base: "/docs/",
     // SEO
     title: "asen",
     description: "asen 的第一个vuepress",
     head: [
-        ['link',{rel:'icon',href:'/asen-logo.png'}],
-        ['meta',{name:'author',content:'阿森'}],
-        ['meta',{name:'Keywords',content:'vuepress 介绍，vuepress 说明'}]
+        ['link', { rel: 'icon', href: '/asen-logo.png' }],
+        ['meta', { name: 'author', content: '阿森' }],
+        ['meta', { name: 'Keywords', content: 'vuepress 介绍，vuepress 说明' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+        ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+        ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ],
+    plugins: [
+        [
+            // 调节时间格式
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    moment.locale("zh-cn")
+                    return moment(timestamp).fromNow("LLL");
+                }
+            }
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: {
+                    message: "发现新内容可用.",
+                    buttonText: "刷新"
+                }
+            }
+        ]
     ],
     themeConfig: {
         lastUpdated: '更新时间',
@@ -23,6 +57,7 @@ module.exports = {
         //         ]
         //     },
         // ],
+
         // 对象形式
         sidebar: {
             '/css/': [
