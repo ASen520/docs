@@ -1,4 +1,5 @@
 const moment = require('moment');
+const secret = require("./secret");
 
 module.exports = {
     // 调节时间格式
@@ -22,8 +23,8 @@ module.exports = {
         // 其他的 Vssue 配置
         owner: 'ASen520',
         repo: 'docs',
-        clientId: 'ad5025c77b3cac521248',
-        clientSecret: '4b78ba245a8d1e2b3c491956fc1765e7108859b9',
+        clientId: secret.clientId,
+        clientSecret: secret.clientSecret,
         autoCreateIssue: true
     },
     '@vuepress/back-to-top': true
