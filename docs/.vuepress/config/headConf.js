@@ -1,7 +1,7 @@
 module.exports = [
     ['link', { rel: 'icon', href: '/asen-logo.png' }],
-    ['meta', { name: 'author', content: '阿森' }],
-    ['meta', { name: 'Keywords', content: 'vuepress 介绍，vuepress 说明' }],
+    ['meta', { name: 'author', content: 'asen' }],
+    ['meta', { name: 'Keywords', content: 'java，vue，element-ui' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],

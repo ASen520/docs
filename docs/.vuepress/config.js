@@ -7,8 +7,8 @@ module.exports = {
     // github pages
     base: "/docs/",
     // SEO
-    title: "asen",
-    description: "asen 的第一个vuepress",
+    title: "Smail",
+    description: "asen的笔记记录册",
     head: headConf,
     plugins: pluginsConf,
     themeConfig: {

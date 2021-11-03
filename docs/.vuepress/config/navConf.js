@@ -1,21 +1,20 @@
 module.exports = [
-    { text: 'Home', link: '/' },
-    { text: 'Guide', link: '/about/' },
+    { text: '首页', link: '/' },
     {
-        text: 'Languages',
+        text: '技术点',
         items: [
             {
-                text: 'Group1',
+                text: 'java',
                 items: [
-                    { text: 'Home', link: '/' },
-                    { text: 'Guide', link: '/about/' }
+                    { text: 'ssm', link: '/ssm/' },
+                    { text: 'springboot', link: '/springboot/' }
                 ]
             },
             {
-                text: 'Group2',
+                text: '大前端',
                 items: [
-                    { text: 'Home', link: '/' },
-                    { text: 'Guide', link: '/about/' }
+                    { text: 'vue', link: '/vue/' },
+                    { text: 'javascript', link: '/javascript/' }
                 ]
             }
         ]

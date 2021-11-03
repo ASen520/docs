@@ -12,8 +12,8 @@ module.exports = {
     '@vuepress/pwa': {
         serviceWorker: true,
         updatePopup: {
-            message: "发现新内容可用.",
-            buttonText: "刷新"
+            message: "骚货，刷新一下，我给你送新东西来了",
+            buttonText: "好的，主人"
         }
     },
     '@vssue/vuepress-plugin-vssue': {
